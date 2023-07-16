@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/userRoutes");
+const messageRoutes = require("./routes/messagesRoute");
 
 const app = express();
 require("dotenv").config();
@@ -18,6 +19,8 @@ app.use(express.json());
 //   });
 
 app.use("/api/auth", userRoutes);
+app.use("/api/messages", messageRoutes);
+
 mongoose
   .connect(
     "mongodb+srv://amarp:hello123@cluster0.yc1yabd.mongodb.net/?retryWrites=true&w=majority"
