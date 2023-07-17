@@ -71,6 +71,13 @@ const Container = styled.div`
     align-items: center;
     color: white;
     gap: 1rem;
+    @media screen and (min-width: 720px) and (max-width: 1080px) {
+      padding: 0.3rem 1rem;
+      svg {
+        font-size: 1rem;
+      }
+    }
+
     .emoji {
       position: relative;
       svg {
